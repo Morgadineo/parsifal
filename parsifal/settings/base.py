@@ -106,7 +106,7 @@ TEMPLATES = [
 
 DATABASES = {
     "default": dj_database_url.config(
-        default=config("DATABASE_URL", default="postgres://richardwagner:holygrail@localhost:5432/parsifal"),
+        default=config("DATABASE_URL"),
         conn_max_age=600,
     )
 }
@@ -180,7 +180,7 @@ STATICFILES_FINDERS = (
 # ==============================================================================
 
 MEDIA_URL = "/media/"
-MEDIA_ROOT = BASE_DIR.parent.parent / "media/"
+MEDIA_ROOT = BASE_DIR.parent.parent / "parsifal/media/"
 DEFAULT_FILE_STORAGE = "django.core.files.storage.FileSystemStorage"
 
 
